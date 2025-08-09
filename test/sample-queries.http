@@ -1,0 +1,23 @@
+### ✅ APPROVED CASE
+POST http://localhost:3000/api/v1/hackrx/run
+Content-Type: application/json
+
+{
+  "query": "46-year-old male, knee surgery in Pune, 3-month-old insurance policy"
+}
+
+### ❌ REJECTED CASE (Less than 90 days)
+POST http://localhost:3000/api/v1/hackrx/run
+Content-Type: application/json
+
+{
+  "query": "46-year-old male, knee replacement in Delhi, 1-month-old insurance policy"
+}
+
+### ❌ REJECTED CASE (Procedure not covered)
+POST http://localhost:3000/api/v1/hackrx/run
+Content-Type: application/json
+
+{
+  "query": "45-year-old female, appendix surgery, 6-month-old policy"
+}
